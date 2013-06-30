@@ -1,0 +1,23 @@
+#yAxis {
+    position: absolute;
+    width: 40px;
+    top: 0;
+}
+#chart {
+    display: inline-block;
+    left: 40px;
+}
+#legend {
+    display: inline-block;
+    position: relative;
+    left: 8px;
+}
+#legendContainer {
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    width: 0;
+}
+#chartContainer {
+    position: relative;
+}

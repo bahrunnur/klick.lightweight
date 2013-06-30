@@ -1,0 +1,274 @@
+// normalize and font configuration
+@import "normalize";
+@import "font-conf";
+
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+// @import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/foundation-global";
+@import "foundation/components/global"; // dipake
+@import "foundation/components/grid"; // dipake
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons"; // dipake
+@import "foundation/components/forms"; // dipake
+@import "foundation/components/custom-forms"; // dipake
+// @import "foundation/components/button-groups";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/split-buttons";
+// @import "foundation/components/flex-video";
+@import "foundation/components/section";
+// @import "foundation/components/top-bar";
+// @import "foundation/components/orbit";
+@import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+@import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+@import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+@import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+// we use compass for helping us with css3
+@import "compass/css3";
+
+// importing user interface of Klick.
+@import "ui/fontawesome";
+@import "ui/buttons";
+@import "ui/helpers";
+@import "ui/candidate";
+@import "ui/install";
+@import "ui/statistics";
+
+/* the variable.
+   ========================================================================== */
+
+// $main-color: $primary-color;
+
+/* the Earth Globe of the page.
+   ========================================================================== */
+
+::selection {
+  background: $primary-color;
+  color: #f6f6f6;
+}
+
+/* ==========================================================================
+   Header of the page
+   ========================================================================== */
+
+header {
+  height: 60px;
+  padding: 7px 0 0;
+  color: $body-bg;
+  background: $primary-color;
+  border-bottom: 1px solid darken($secondary-color, 20%);
+
+  h1 {
+    color: $body-bg;
+    font-size: emCalc(24px);
+    text-align: center;
+  }
+}
+
+.admin-header {
+  .welcome-message { margin-top: 10px; }
+  .logout { margin-left: 8px; }
+  h1 { text-align: left; }
+}
+
+/* ==========================================================================
+   Content of the page
+   ========================================================================== */
+
+.container {
+  min-height: 580px;
+  margin: 50px 0;
+}
+
+.sheet {
+  height: 400px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: -40px 0;
+  margin-bottom: 30px;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+
+  h2 {
+    position: absolute;
+    bottom: 30px;
+    width: 91%;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: emCalc(24px);
+    margin: -0.5em 0 0;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .details {
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    width: 33%;
+    padding-bottom: 10px;
+    opacity: 0;
+    @include transition(0.3s all ease);
+    a { margin-bottom: 0; }
+  }
+
+  &:hover { .details { opacity: 0.95;bottom: 30px; } }
+}
+
+.admin-menu {
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+
+  h2 {
+    padding: 0.5em 0.8em;
+    margin: 0;
+    color: $body-bg;
+    background: darken($primary-color, 10%);
+    font-size: emCalc(27px);
+  }
+
+  a {
+    padding: 1em;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #666;
+    background: #fff;
+    border-bottom: 1px solid $secondary-color;
+    @include transition(all 0.3s ease);
+
+    &.back {
+      background: $secondary-color;
+      color: $primary-color;
+    }
+    
+    &:hover, 
+    &.active {
+      background: $primary-color;
+      color: $body-bg;
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}
+
+.main-pool,
+.install-pool {
+  background: #fff;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+}
+
+.install-pool { padding: 1.5em; }
+
+.main-pool {
+  margin-left: -30px;
+  padding: 30px;
+}
+
+.dashboard-panel {
+  border: 1px solid $secondary-color;
+  margin-bottom: 1.9em;
+
+  h3 {
+    padding: 0.5em 0.8em;
+    margin: 0;
+    font-size: emCalc(20px);
+    color: $body-bg;
+    background: darken($primary-color, 10%);
+  }
+
+  a {
+    padding: 1em;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: emCalc(14px);
+    color: #666;
+    border-bottom: 1px solid $secondary-color;
+    @include transition(all 0.3s ease);
+
+    &:hover {
+      background: $primary-color;
+      color: $body-bg;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.login-header {
+  a {
+    display: block;
+    text-indent: -9999px;
+    background-image: url('../images/header.png');
+    background-size: 280px; 
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 90px;
+    margin: 0 auto;
+    @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+  }
+}
+
+.login-form {
+  background: #fff;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+  padding: 20px;
+  margin-bottom: 10px;
+
+  input[type="submit"] {
+    margin-bottom: 0;
+  }
+
+  form {
+    margin-bottom: 0;
+  }
+}
+
+.forgot-passwd { font-size: emCalc(12px); }
+
+/* ==========================================================================
+   Footer of the page
+   ========================================================================== */
+
+footer {
+  height: 100px;
+  padding: 25px 0 0;
+  color: $body-bg;
+  background: darken($primary-color, 30%);
+
+  p { font-size: emCalc(12px); }
+
+  .footer-logo {
+    background: url('../images/logo.png') no-repeat;
+    display: inline-block;
+    margin: 0 5px -10px;
+    width: 100px;
+    height: 34px;
+  }
+}

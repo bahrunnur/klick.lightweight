@@ -1,0 +1,122 @@
+.can-name {
+    float: left;
+    margin-right: 0.2em;
+}
+
+.img-layer {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 0.825em;
+    @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 3px);
+    
+    a {
+        @include transition(0.3s all ease);
+        opacity: 0;
+        background: rgba(0,0,0,.3);
+        text-decoration: none;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        width: 150px;
+        height: 150px;
+        font-size: emCalc(48px);
+        padding-left: 55px;
+        line-height: 150px;
+    }
+
+    &:hover {
+        a { opacity: 1; }
+    }
+}
+
+.control-button {
+    float: left;
+    margin-top: 14px;
+    padding: 0 emCalc(7px);
+    a { margin: 0; }
+}
+
+.meter {
+    font-size: emCalc(12px);
+    padding: 3px;
+    color: $body-bg;
+}
+
+.total-vote {
+    font-size: emCalc(18px);
+}
+
+.info {
+    border: 1px solid $secondary-color;
+    background: $body-bg;
+    padding: 1em 1.5em;
+
+    ul, ol {
+        margin-left: emCalc(26px);
+    }
+}
+
+#drop {
+    height: 200px;
+    padding: 5em 3em;
+    margin-bottom: emCalc(14px);
+    text-align: center;
+    border: 1px dashed $secondary-color;
+    background: $body-bg;
+    font-size: emCalc(14px);
+
+    a {
+        margin-top: 0.8em;
+    }
+
+    input[type="file"] { 
+        color: $primary-color;
+        margin-top: 16px;
+    }
+}
+
+#uploadProgress {
+    input { display: none; }
+
+    p {
+        position: absolute;
+        top: 75px;
+        left: 110px;
+        width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: $primary-color;
+    }
+
+    i {
+        position: absolute;
+        top: 95px;
+        left: 110px;
+        color: $secondary-color;
+        font-size: emCalc(12px);
+    }
+
+    canvas {
+        position: absolute;
+        top: 62px;
+        left: 40px;
+    }
+
+    span {
+        position: absolute;
+        top: 76px;
+        left: 54px;
+        font-size: 2em;
+        cursor: pointer;
+        color: $alert-color;
+        background: $body-bg;
+        width: 1em;
+        text-align: center;
+        @include border-radius(50%);
+    }
+}
+
+
+.error p { color: $alert-color; }
+#cke_info { margin-bottom: 1.5em; }

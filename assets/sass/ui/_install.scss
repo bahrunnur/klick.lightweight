@@ -1,0 +1,20 @@
+.permission-handler,
+.terminal-command {
+    margin-bottom: 1.25em;
+    padding: 0.8em;
+
+    p {
+        margin-bottom: 0;
+        font-size: emCalc(12px);
+    }
+}
+
+.permission-handler {
+    border: 1px solid $alert-color;
+    background: lighten($alert-color, 20%);
+}
+
+.terminal-command {
+    border: 1px solid darken($secondary-color, 20%);
+    background: $secondary-color;
+}
