@@ -40,4 +40,4 @@ Installasi
 Changelog
 ----------
 
-Oops, untuk saat ini kami masih merekap history commit di repository git kami.
+Oops, untuk saat ini kami masih merekap history commit di repository development kami.
